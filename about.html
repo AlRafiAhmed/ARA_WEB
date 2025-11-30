@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Rafi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+            height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .art-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="text-gray-900 dark:text-gray-100 transition-colors duration-300 relative min-h-screen min-w-screen font-sans">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-transparent backdrop-blur-sm z-50 border-b border-gray-200/50 dark:border-slate-700/50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Rafi</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+                    <a href="about.html" class="text-indigo-600 dark:text-indigo-400 font-medium">About</a>
+                    <a href="projects.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a>
+                    <a href="certificates.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Certificates</a>
+                    <a href="services.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Services</a>
+                    <a href="cv.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">CV</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200/50 dark:border-slate-700/50 bg-transparent backdrop-blur-sm">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-indigo-600 dark:text-indigo-400 font-medium">About</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Projects</a>
+                <a href="certificates.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Certificates</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Abstract/Patterned Background (example: geometric svg pattern, soft gradient, and dots) -->
+    <div class="art-bg z-0">
+        <svg width="100vw" height="100vh" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100vw;height:100vh;position:absolute;top:0;left:0;">
+            <defs>
+                <radialGradient id="bggrad" cx="70%" cy="20%" r="90%" fx="70%" fy="20%" gradientTransform="rotate(0)">
+                    <stop stop-color="#8b5cf6" stop-opacity="0.16"/>
+                    <stop offset="0.55" stop-color="#6366f1" stop-opacity="0.09"/>
+                    <stop offset="1" stop-color="#1e293b" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#bggrad)"/>
+            <!-- Decorative Circles -->
+            <circle cx="260" cy="120" r="72" fill="#9f7aea22"/>
+            <circle cx="1320" cy="800" r="115" fill="#6366f1" fill-opacity="0.06"/>
+            <circle cx="1400" cy="90" r="58" fill="#00000018"/>
+            <!-- Diagonal lines -->
+            <line x1="50" y1="100" x2="1390" y2="860" stroke="#6366f1" stroke-width="4" stroke-opacity="0.04" />
+            <line x1="80" y1="50" x2="1100" y2="870" stroke="#312e81" stroke-width="2" stroke-opacity="0.05" />
+            <!-- Dots -->
+            <circle cx="660" cy="770" r="4" fill="#a5b4fc"/>
+            <circle cx="420" cy="680" r="3" fill="#818cf8"/>
+        </svg>
+    </div>
+
+    <!-- About Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16 fade-in-on-scroll">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">About Me</h1>
+            </div>
+
+            <!-- Photo and Bio -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16 fade-in-on-scroll">
+                <div>
+                    <img src="img/gmn-2.JPG" alt="Rafi - Professional Photo" class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Hello, I'm Al Rafi Ahmed</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
+                        I'm a Full Stack Developer and Machine Learning Engineer with a passion for creating 
+                        innovative solutions that solve real-world problems. With expertise spanning from frontend 
+                        design to backend architecture and AI/ML implementation, I bring a comprehensive approach 
+                        to software development.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
+                        My journey in technology started with a curiosity about how things work, and it has evolved 
+                        into a career dedicated to building scalable, efficient, and user-friendly applications. 
+                        I believe in writing clean, maintainable code and staying updated with the latest industry trends.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
+                        projects, or sharing knowledge with the developer community.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="mb-16 fade-in-on-scroll">
+                <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Frontend</h3>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <li>• HTML5, CSS3, JavaScript</li>
+                            <li>• React, Vue.js, Angular</li>
+                            <li>• Tailwind CSS, Bootstrap</li>
+                            <li>• Responsive Design</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Backend</h3>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <li>• Node.js, Python, Java</li>
+                            <li>• Express, Django, Flask</li>
+                            <li>• RESTful APIs, GraphQL</li>
+                            <li>• Database Design (SQL/NoSQL)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">ML & Data</h3>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <li>• TensorFlow, PyTorch</li>
+                            <li>• Scikit-learn, Pandas</li>
+                            <li>• Data Analysis & Visualization</li>
+                            <li>• Deep Learning, NLP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="mb-16 fade-in-on-scroll">
+                <h2 class="text-3xl font-bold text-center mb-12">Skills & Certifications</h2>
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <div class="relative pl-8 border-l-2 border-indigo-600 dark:border-indigo-400">
+                        <div class="absolute -left-2 top-0 w-4 h-4 bg-indigo-600 dark:bg-indigo-400 rounded-full"></div>
+                        <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                            <h3 class="text-xl font-semibold mb-2">Front-end Devlopment with React</h3>
+                            <p class="text-indigo-600 dark:text-indigo-400 mb-2">Creative IT Institute | 2023 - 2024</p>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                Leading development of scalable web applications, implementing ML solutions, 
+                                and mentoring junior developers. Reduced application load time by 40% through 
+                                optimization strategies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 border-l-2 border-indigo-600 dark:border-indigo-400">
+                        <div class="absolute -left-2 top-0 w-4 h-4 bg-indigo-600 dark:bg-indigo-400 rounded-full"></div>
+                        <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                            <h3 class="text-xl font-semibold mb-2">python with machine learning</h3>
+                            <p class="text-indigo-600 dark:text-indigo-400 mb-2">EDGE ICT Division Bangladesh | 2024 - 2025</p>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                Developed and maintained multiple web applications, integrated third-party APIs, 
+                                and collaborated with cross-functional teams to deliver high-quality products.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="fade-in-on-scroll">
+                <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    
+                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2">Intermediate of Science</h3>
+                        <p class="text-indigo-600 dark:text-indigo-400 mb-2">Amrita Lal Dey College | 2019 - 20121</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Completed Intermediate of Science with a strong focus on Physics, Chemistry, and Mathematics, developing solid analytical and problem-solving skills. Engaged in practical experiments, academic projects, and research-oriented learning that strengthened my scientific foundation and technical understanding. Graduated with excellent academic performance.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2">Bachelor of Science and Engineering</h3>
+                        <p class="text-indigo-600 dark:text-indigo-400 mb-2">International University of Business Agriculture and Technology | 2022 - Present</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Full Stack Developer specialized in Machine Learning and Artificial Intelligence, with strong research experience. Focused on advanced algorithms, software development methodologies, database systems, and modern web technologies
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

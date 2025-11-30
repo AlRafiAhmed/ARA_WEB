@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafi - Full Stack Developer & ML Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+            height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        .art-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .profile-pic {
+            object-fit: cover;
+            object-position: center;
+            width: 500px;
+            height: 500px;
+            border-radius: 9999px;
+            border: 10px solid rgba(255,255,255,0.8);
+            box-shadow: 0 12px 60px 0 rgba(63,67,122,0.23),0 2.5px 10px 0 rgba(70,80,172,0.08);
+            transition: width 0.3s, height 0.3s, border-width 0.3s;
+        }
+        @media (max-width: 1400px) {
+          .profile-pic { width: 400px; height: 400px; }
+        }
+        @media (max-width: 1100px) {
+          .profile-pic { width: 270px; height: 270px; }
+        }
+        @media (max-width: 900px) {
+            .main-split { flex-direction: column!important; }
+            .profile-col, .txt-col { width: 100%!important; min-width: 0!important; }
+            .profile-col { justify-content: flex-start!important; min-height: 250px;}
+            .txt-col { min-height: 40vh!important;}
+        }
+        @media (max-width: 700px) {
+            .main-split { padding: 0 !important; }
+            .txt-col { padding-top: 1.5rem !important; padding-bottom: 2.5rem !important;}
+            .profile-pic { width: 160px; height: 160px; }
+        }
+        @media (max-width: 520px) {
+            .profile-pic { width: 120px; height: 120px; border-width: 4px;}
+            .txt-col h1 { font-size: 1.8rem !important;}
+            .txt-col p, .txt-col .role { font-size: 1rem !important;}
+            .main-split { gap: 1.2rem !important;}
+        }
+    </style>
+</head>
+<body class="text-gray-900 dark:text-gray-100 transition-colors duration-300 relative min-h-screen min-w-screen font-sans">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-transparent backdrop-blur-sm z-50 border-b border-gray-200/50 dark:border-slate-700/50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Rafi</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-indigo-600 dark:text-indigo-400 font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+                    <a href="projects.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a>
+                    <a href="certificates.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Certificates</a>
+                    <a href="services.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Services</a>
+                    <a href="cv.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">CV</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg hover:bg-gray-100/50 dark:hover:bg-slate-800/50 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200/50 dark:border-slate-700/50 bg-transparent backdrop-blur-sm">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-indigo-600 dark:text-indigo-400 font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50">About</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50">Projects</a>
+                <a href="certificates.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50">Certificates</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Abstract/Patterned Background (example: geometric svg pattern, soft gradient, and dots) -->
+    <div class="art-bg z-0">
+        <svg width="100vw" height="100vh" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100vw;height:100vh;position:absolute;top:0;left:0;">
+            <defs>
+                <radialGradient id="bggrad" cx="70%" cy="20%" r="90%" fx="70%" fy="20%" gradientTransform="rotate(0)">
+                    <stop stop-color="#8b5cf6" stop-opacity="0.16"/>
+                    <stop offset="0.55" stop-color="#6366f1" stop-opacity="0.09"/>
+                    <stop offset="1" stop-color="#1e293b" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#bggrad)"/>
+            <!-- Decorative Circles -->
+            <circle cx="260" cy="120" r="72" fill="#9f7aea22"/>
+            <circle cx="1320" cy="800" r="115" fill="#6366f1" fill-opacity="0.06"/>
+            <circle cx="1400" cy="90" r="58" fill="#00000018"/>
+            <!-- Diagonal lines -->
+            <line x1="50" y1="100" x2="1390" y2="860" stroke="#6366f1" stroke-width="4" stroke-opacity="0.04" />
+            <line x1="80" y1="50" x2="1100" y2="870" stroke="#312e81" stroke-width="2" stroke-opacity="0.05" />
+            <!-- Dots -->
+            <circle cx="660" cy="770" r="4" fill="#a5b4fc"/>
+            <circle cx="420" cy="680" r="3" fill="#818cf8"/>
+        </svg>
+    </div>
+
+    <main class="main-split flex flex-row items-center justify-center min-h-screen min-w-screen relative z-10 gap-10 px-12 py-4">
+        <!-- Left: Round (Circle) Photo -->
+        <div class="profile-col flex flex-col items-center justify-center w-[40%] min-w-[220px]">
+            <div class="flex flex-col items-center relative z-20">
+                <img src="img/gmn-1.jpg" alt="Rafi Ahmed" class="profile-pic" loading="lazy"/>
+            </div>
+        </div>
+        
+        <!-- Right: Text Content -->
+        <div class="txt-col flex flex-col justify-center items-start w-[60%] max-w-2xl px-3 z-20">
+            <h1 class="text-5xl md:text-6xl font-bold mb-5 drop-shadow-lg bg-white/60 dark:bg-slate-900/80 px-7 py-3 rounded-lg inline-block">
+                Hi, I'm <span class="text-indigo-600 dark:text-indigo-400">Rafi</span>
+            </h1>
+            <span class="role text-2xl md:text-3xl font-medium text-indigo-700 dark:text-indigo-300 mb-3 bg-indigo-100/60 dark:bg-indigo-900/40 px-4 py-2 rounded drop-shadow">
+                Full Stack Developer & ML Engineer
+            </span>
+            <p class="text-lg md:text-xl text-gray-800 dark:text-gray-200 mb-7 max-w-xl drop-shadow bg-white/80 dark:bg-slate-800/70 px-5 py-3 rounded-lg inline-block">
+                I create beautiful, functional web applications and build intelligent machine learning solutions.
+                Passionate about clean code, innovative design, and the latest in technology.
+            </p>
+            
+        </div>
+    </main>
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        (function () {
+            try {
+                const userTheme = localStorage.theme;
+                if (
+                    userTheme === 'dark' ||
+                    (!userTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+                ) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (_) {}
+        })();
+    </script>
+</body>
+</html>

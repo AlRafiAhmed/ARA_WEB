@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Rafi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+      body {
+        background: #f4f7fa;
+        color: #222;
+      }
+      .fade-in {
+        animation: fadeIn 1.2s ease;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(28px);}
+        to { opacity: 1; transform: translateY(0);}
+      }
+      .icon-bg {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.4rem;
+        width: 2.4rem;
+        border-radius: 9999px;
+        margin-right: 0.8rem;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+      .icon-facebook {background: #3b5998;}
+      .icon-instagram {background: #e4405f;}
+      .icon-threads {background: #222;}
+      .icon-envelope {background: #777;}
+      .icon-phone {background: #005e7a;}
+      .icon-github {background: #333;}
+      .icon-linkedin {background: #2867b2;}
+      .icon-upwork {background: #16a601;}
+      .icon-stackoverflow {background: #f48024;}
+      .icon-layer-group {background: #7b5fa7;}
+      .icon-fiverr {background: #1dbf73;}
+      .icon-mail {background: #667781;}
+      a.contact-link {
+        flex: 1 1 48%;
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 0;
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+        color: #222;
+        font-weight: 600;
+        padding: 0.75rem 1.2rem;
+        box-shadow: 0 1px 4px #0001;
+        text-decoration: none;
+        transition: background 0.15s, color 0.15s, box-shadow 0.15s, border 0.2s;
+      }
+      a.contact-link:hover {
+        background: #f3f4f6;
+        color: #003366;
+        border-color: #cdd2d6;
+      }
+      .contact-section-title {
+        font-size: 2rem;
+        color: #1a2340;
+        font-weight: 700;
+        padding: 2.5rem 0 1.2rem 0;
+        text-align: center;
+      }
+      .contact-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem 3%;
+        margin-top: 2.5rem;
+      }
+      @media (max-width: 600px) {
+        .contact-list {
+          flex-direction: column;
+          gap: 0.5rem 0;
+        }
+        a.contact-link { flex-basis: 100%!important; }
+      }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+            height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .art-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="transition-colors duration-300 text-gray-900 dark:text-gray-200 relative min-h-screen min-w-screen font-sans">
+
+    <nav class="fixed top-0 w-full bg-transparent backdrop-blur-sm z-50 border-b border-gray-200/50 dark:border-slate-700/50 shadow-sm">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-neutral-800 dark:text-neutral-200">Rafi</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors">About</a>
+                    <a href="projects.html" class="text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors">Projects</a>
+                    <a href="certificates.html" class="text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors">Certificates</a>
+                    <a href="services.html" class="text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors">Services</a>
+                    <a href="cv.html" class="text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors">CV</a>
+                    <a href="contact.html" class="text-indigo-700 dark:text-indigo-400 font-semibold">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center space-x-2">
+                    <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-[#222f37] transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden px-2 pt-2 pb-3 space-y-1">
+            <a href="index.html" class="block text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors px-3 py-2 rounded-md">Home</a>
+            <a href="about.html" class="block text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors px-3 py-2 rounded-md">About</a>
+            <a href="projects.html" class="block text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors px-3 py-2 rounded-md">Projects</a>
+            <a href="certificates.html" class="block text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors px-3 py-2 rounded-md">Certificates</a>
+            <a href="services.html" class="block text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors px-3 py-2 rounded-md">Services</a>
+            <a href="portfolio.html" class="block text-gray-800 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-indigo-400 transition-colors px-3 py-2 rounded-md">Portfolio</a>
+            <a href="contact.html" class="block text-indigo-700 dark:text-indigo-400 font-semibold px-3 py-2 rounded-md">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Abstract/Patterned Background (example: geometric svg pattern, soft gradient, and dots) -->
+    <div class="art-bg z-0">
+        <svg width="100vw" height="100vh" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100vw;height:100vh;position:absolute;top:0;left:0;">
+            <defs>
+                <radialGradient id="bggrad" cx="70%" cy="20%" r="90%" fx="70%" fy="20%" gradientTransform="rotate(0)">
+                    <stop stop-color="#8b5cf6" stop-opacity="0.16"/>
+                    <stop offset="0.55" stop-color="#6366f1" stop-opacity="0.09"/>
+                    <stop offset="1" stop-color="#1e293b" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#bggrad)"/>
+            <!-- Decorative Circles -->
+            <circle cx="260" cy="120" r="72" fill="#9f7aea22"/>
+            <circle cx="1320" cy="800" r="115" fill="#6366f1" fill-opacity="0.06"/>
+            <circle cx="1400" cy="90" r="58" fill="#00000018"/>
+            <!-- Diagonal lines -->
+            <line x1="50" y1="100" x2="1390" y2="860" stroke="#6366f1" stroke-width="4" stroke-opacity="0.04" />
+            <line x1="80" y1="50" x2="1100" y2="870" stroke="#312e81" stroke-width="2" stroke-opacity="0.05" />
+            <!-- Dots -->
+            <circle cx="660" cy="770" r="4" fill="#a5b4fc"/>
+            <circle cx="420" cy="680" r="3" fill="#818cf8"/>
+        </svg>
+    </div>
+
+    <div class="h-16"></div>
+
+    <section class="py-10 min-h-[80vh] relative z-10">
+      <div class="relative z-10 container mx-auto px-4 fade-in">
+        <div>
+          <div>
+            <h3 class="contact-section-title">Connect With Me</h3>
+          </div>
+          <hr class="opacity-60">
+          <div class="contact-list">
+            <a class="contact-link" href="https://www.facebook.com/al.rafi.7906">
+              <span class="icon-bg icon-facebook"><i class="fa-brands fa-facebook-f"></i></span> Al Rafi Ahmed
+            </a>
+            <a class="contact-link" href="https://www.instagram.com/md.islam960/">
+              <span class="icon-bg icon-instagram"><i class="fa-brands fa-instagram"></i></span> md.islam960
+            </a>
+            <a class="contact-link" href="https://www.threads.net/@md.islam960">
+              <span class="icon-bg icon-threads"><i class="fa-brands fa-threads"></i></span> threads.net/@md.islam960
+            </a>
+            
+            <a class="contact-link" href="mailto:alrafi.ahmed.dev@gmail.com">
+              <span class="icon-bg icon-mail"><i class="fa-solid fa-envelope"></i></span> alrafi.ahmed.dev@gmail.com
+            </a>
+            <a class="contact-link" href="tel:+8801406147056">
+              <span class="icon-bg icon-phone"><i class="fa-solid fa-phone"></i></span> +8801406147056
+            </a>
+            <a class="contact-link" href="tel:+8801576581728">
+              <span class="icon-bg icon-phone"><i class="fa-solid fa-phone"></i></span> +8801576581728
+            </a>
+            <a class="contact-link" href="https://github.com/AlRafiAhmed">
+              <span class="icon-bg icon-github"><i class="fa-brands fa-github"></i></span> github.com/AlRafiAhmed
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/in/al-rafi-ahmed1/?trk=public-profile-join-page">
+              <span class="icon-bg icon-linkedin"><i class="fa-brands fa-linkedin-in"></i></span> linkedin.com/in/al-rafi-ahmed1
+            </a>
+            <a class="contact-link" href="https://www.upwork.com/freelancers/~01d49c9fb9754934f0?viewMode=1">
+              <span class="icon-bg icon-upwork"><i class="fa-brands fa-upwork"></i></span> upwork.com/Al-Rafi-Ahmed/
+            </a>
+            <a class="contact-link" href="https://www.fiverr.com/ar_ahmed24/buying?source=avatar_menu_profile">
+              <span class="icon-bg icon-fiverr">
+                <svg xmlns="https://www.fiverr.com/ar_ahmed24/buying?source=avatar_menu_profile" viewBox="0 0 32 32" fill="white" width="24" height="24"><circle cx="16" cy="16" r="16" fill="#1dbf73"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="13" font-family="Arial, sans-serif" font-weight="bold">fi</text></svg>
+              </span> fiverr.com/ar_ahmed24
+            </a>
+            <a class="contact-link" href="https://stackoverflowteams.com/c/eligance-group-of-industry/users/1/">
+              <span class="icon-bg icon-stackoverflow"><i class="fa-brands fa-stack-overflow"></i></span> stackoverflow.com/Al-Rafi-Ahmed/
+            </a>
+            <a class="contact-link" href="https://www.freelancer.com/u/alrafiahmed30320">
+              <span class="icon-bg icon-layer-group"><i class="fa-solid fa-layer-group"></i></span> @alrafiahmed30320
+            </a>
+          </div>
+          <hr class="opacity-60 mt-10">
+        </div>
+      </div>
+    </section>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        (function () {
+            try {
+                const userTheme = localStorage.theme;
+                if (
+                    userTheme === 'dark' ||
+                    (!userTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+                ) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (_) {}
+        })();
+    </script>
+</body>
+</html>

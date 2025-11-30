@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates - Rafi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+            height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .art-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="text-gray-900 dark:text-gray-100 transition-colors duration-300 relative min-h-screen min-w-screen font-sans">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-transparent backdrop-blur-sm z-50 border-b border-gray-200/50 dark:border-slate-700/50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Rafi</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+                    <a href="projects.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a>
+                    <a href="certificates.html" class="text-indigo-600 dark:text-indigo-400 font-medium">Certificates</a>
+                    <a href="services.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Services</a>
+                    <a href="cv.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">CV</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200/50 dark:border-slate-700/50 bg-transparent backdrop-blur-sm">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">About</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Projects</a>
+                <a href="certificates.html" class="block px-3 py-2 rounded-md text-indigo-600 dark:text-indigo-400 font-medium">Certificates</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Abstract/Patterned Background (example: geometric svg pattern, soft gradient, and dots) -->
+    <div class="art-bg z-0">
+        <svg width="100vw" height="100vh" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100vw;height:100vh;position:absolute;top:0;left:0;">
+            <defs>
+                <radialGradient id="bggrad" cx="70%" cy="20%" r="90%" fx="70%" fy="20%" gradientTransform="rotate(0)">
+                    <stop stop-color="#8b5cf6" stop-opacity="0.16"/>
+                    <stop offset="0.55" stop-color="#6366f1" stop-opacity="0.09"/>
+                    <stop offset="1" stop-color="#1e293b" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#bggrad)"/>
+            <!-- Decorative Circles -->
+            <circle cx="260" cy="120" r="72" fill="#9f7aea22"/>
+            <circle cx="1320" cy="800" r="115" fill="#6366f1" fill-opacity="0.06"/>
+            <circle cx="1400" cy="90" r="58" fill="#00000018"/>
+            <!-- Diagonal lines -->
+            <line x1="50" y1="100" x2="1390" y2="860" stroke="#6366f1" stroke-width="4" stroke-opacity="0.04" />
+            <line x1="80" y1="50" x2="1100" y2="870" stroke="#312e81" stroke-width="2" stroke-opacity="0.05" />
+            <!-- Dots -->
+            <circle cx="660" cy="770" r="4" fill="#a5b4fc"/>
+            <circle cx="420" cy="680" r="3" fill="#818cf8"/>
+        </svg>
+    </div>
+
+    <!-- Certificates Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16 fade-in-on-scroll">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">My Certificates</h1>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Professional certifications and achievements
+                </p>
+            </div>
+
+            <!-- Certificates Grid -->
+            <div id="certificates-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certificate cards will be rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="certificate-modal" class="modal hidden fixed inset-0 z-50 overflow-y-auto">
+        <div class="modal-overlay fixed inset-0 bg-black bg-opacity-50"></div>
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="modal-content bg-white dark:bg-slate-800 rounded-xl max-w-3xl w-full p-6 relative shadow-2xl">
+                <button id="modal-close-btn" class="modal-close absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <h2 id="modal-title" class="text-3xl font-bold mb-4">Certificate Title</h2>
+                <div class="bg-gray-100 dark:bg-slate-700 rounded-lg h-96 mb-4 flex items-center justify-center relative overflow-hidden">
+                    <img id="modal-image" src="" alt="Certificate" class="w-full h-full object-cover rounded-lg" style="display:none;" onerror="this.style.display='none';document.getElementById('modal-svg-fallback').style.display='block';">
+                    <svg id="modal-svg-fallback" class="w-32 h-32 text-gray-300 dark:text-gray-500 hidden absolute inset-0 m-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                </div>
+                <div id="modal-description" class="text-gray-600 dark:text-gray-400 mb-4"></div>
+                <div id="modal-details" class="grid grid-cols-2 gap-4 text-sm"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Certificate data
+    const certificates = [
+        {
+            id: 1,
+            title: "Exclusive Workshop on Backend Development with Node.js",
+            imgSrc: "img/c1.PNG",
+            imgAlt: "Front-End Development with React Certificate",
+            description: "The Certificate of Training from Creative IT Institute confirms Al Rafi Ahmed successfully completed an exclusive one-day workshop on Backend Development with Node.js on November 12, 2024.",
+            details: [
+                {label: "Issuer:", value: "Creative IT Institute"},
+                {label: "Issued:", value: "November 12, 2024"},
+                {label: "ID:", value: "CIT U NODE JS - 2401"}
+            ]
+        },
+        {
+            id: 2,
+            title: "Digital Literacy Course from FUTURENATION",
+            imgSrc: "img/c2.png",
+            imgAlt: "Google Cloud Professional ML Engineer",
+            description: "The Digital Literacy course certificate from Futurenation verifies that Al Rafi Ahmed successfully mastered fundamental digital skills and passed the final assessment by 3rd December 2024.",
+            details: [
+                {label: "Issuer:", value: "Futurenation"},
+                {label: "Issued:", value: "3rd December 2024"}
+            ]
+        },
+        {
+            id: 3,
+            title: "Introduction to MERN Stack",
+            imgSrc: "img/c3.jpg",
+            imgAlt: "Meta React Developer",
+            description: "The Simplilearn SkillUP Certificate of Completion confirms Al Rafi Ahmed successfully finished the Introduction to MERN Stack self-paced online course",
+            details: [
+                {label: "Issuer:", value: "Simplilearn SkillUP"},
+                {label: "Issued:", value: "November 12, 2024"},
+                {label: "Credential ID:", value: "SL/SU/T/2024/2361719"},
+                {label: "Course Name:", value: "Introduction to MERN Stack"}
+            ]
+        },
+        {
+            id: 4,
+            title: "Front-End Development with React",
+            imgSrc: "img/c4.jpg",
+            imgAlt: "Front-End Development with React Certificate",
+            description: "Successfully completed the Frontend Development with React course at Creative IT Institute from November 2023 to July 2024, achieving Grade A, gaining practical skills in modern web development.",
+            details: [
+                {label: "Issuer:", value: "Creative IT Institute"},
+                {label: "Issued:", value: "27 November, 2025"},
+                {label: "Grade:", value: "A"},
+                {label: "ID:", value: "U REACT-23100303"},
+                {label: "Course Duration:", value: "Nov 2023 - Jul 2024"}
+            ]
+        },
+        {
+            id: 5,
+            title: "ReactJS for Beginners",
+            imgSrc: "img/c5.jpg",
+            imgAlt: "MongoDB Certified Developer",
+            description: "The Simplilearn SkillUP Certificate of Completion verifies Al Rafi Ahmed successfully completed the online ReactJS for Beginners course.",
+            details: [
+                {label: "Issuer:", value: "Simplilearn SkillUP"},
+                {label: "Issued:", value: "1st December 2024"},
+                {label: "Credential ID:", value: "7615834"},
+                {label: "Signatory", value: "Krishna Kumar, CEO, Simplilearn"}
+            ]
+        },
+        {
+            id: 6,
+            title: "International Conference on Data Science, AI and Applications (ICDSAIA 2025)",
+            imgSrc: "img/c6.PNG",
+            imgAlt: "Node.js Application Development",
+            description: "This paper presents a deep learning-based system for accurately detecting pests and diseases in maize crops, enabling early diagnosis, improved monitoring, and enhanced agricultural productivity through automated image analysis.",
+            details: [
+                {label: "Issuer:", value: "EATL Innovation Hub and the University of Salford, Manchester,London"},
+                {label: "Issued:", value: "July 18 – 19, 2025"},
+                {label: "Venue:", value: "EATL Innovation Hub, Kaliakoir Hi-Tech City, Gazipur"},
+                {label: "Paper title:", value: "A Deep Learning Approach for Detecting Pests and Diseases in Maize Crops "},
+                {label: "Co-Authors:", value: "MD Abdullah Ibne Aziz & Faisal Imran "}
+            ]
+        },
+        {
+            id: 7,
+            title: "Machine Learning",
+            imgSrc: "img/c7.jpg",
+            imgAlt: "Front-End Development with React Certificate",
+            description: "The Simplilearn SkillUP Certificate of Completion confirms Al Rafi Ahmed successfully finished the online Machine Learning course.",
+            details: [
+                {label: "Issuer:", value: "Simplilearn SkillUP"},
+                {label: "Issued:", value: "30th November 2024"},
+                {label: "ID:", value: "7614151"},
+                {label: "Signatory:", value: "Krishna Kumar, CEO, Simplilearn"}
+            ]
+        },
+        {
+            id: 8,
+            title: "Python with Machine Learning",
+            imgSrc: "img/c8.png",
+            imgAlt: "Google Cloud Professional ML Engineer",
+            description: "This certification demonstrates the ability to design, build, and productionize ML models to solve business challenges using Google Cloud technologies.",
+            details: [
+                {label: "Issuer:", value: "EDGE ICT Division Bangladesh"},
+                {label: "Issued:", value: "22 July, 2025"},
+                {label: "Credential ID:", value: "EDGE-DSTS-106-2639-00028"}
+            ]
+        },
+        {
+            id: 9,
+            title: "Certificate Of Driving Course",
+            imgSrc: "img/c9.jpg",
+            imgAlt: "Meta React Developer",
+            description: "This Certificate of Driving Course verifies that Al Rafi Ahmed completed official driving training at Shahjalal Driving Training Center from September 1 to November 1, 2025, approved by BRTA.",
+            details: [
+                {label: "Issuer:", value: "Shahjalal Driving Training Center"},
+                {label: "Duration:", value: "01 September 2025 to 01 November 2025"},
+                {label: "Credential ID:", value: "4221462"},
+                {label: "Approval", value: "Approved by BRTA, Government of the People's Republic of Bangladesh"}
+            ]
+        },
+        {
+            id: 10,
+            title: "Success Certificate by Prothom Alo for সবুজ উপকুল 2015",
+            imgSrc: "img/c10.jpg",
+            imgAlt: "TensorFlow Developer Certificate",
+            description: "The certificate recognizes achievement related to the Prothom Alo Shobuje Utsab 2015 (সবুজ উপকুল ২০১৫), or Green Festival 2015, which is focused on environmental education and promotion. The context suggests a high achievement (A Grade or equivalent) in this environmental activity.",
+            details: [
+                {label: "Organizer:", value: " Prothom Alo"},
+                {label: "Duration:", value: "The event date is listed as September 5, 2015 - October 30, 2015."},
+                {label: "Class:", value: "7"},
+                {label: "Venue:", value: "Gowrichanna N.S. Secondary School"}
+            ]
+        },
+        {
+            id: 11,
+            title: "বরগুনা জেলা অষ্টম স্কাউট সমাবেশ",
+            imgSrc: "img/c11.jpg",
+            imgAlt: "MongoDB Certified Developer",
+            description: "This Certificate confirms Al Rafi Ahmed successfully participated in the Barguna District 8th Scout Gathering from January 21–25, 2017",
+            details: [
+                {label: "Organizer:", value: "বাংলাদেশ স্কাউটস,বরগুনা জেলা"},
+                {label: "Duration:", value: "21–25 January 2017"},
+                {label: " Venue:", value: "Barguna Sadar Upazila Parishad Field"}
+            ]
+        },
+        {
+            id: 12,
+            title: "Rc/Rc Basic & First Aid Training",
+            imgSrc: "img/c12.jpg",
+            imgAlt: "Node.js Application Development",
+            description: "This document serves as formal proof that an individual successfully finished a structured educational or training program. Obtaining it required active engagement with all required materials and meeting the minimum performance standards set by the organization. It validates the individual's commitment to deepening their specialized skills.",
+            details: [
+                {label: "Issuer:", value: "Bangladesh Red Crescent Society, Barguna Red Crescent Unit"},
+                {label: "Venue:", value: "Gowrichanna N.S. Secondary School"},
+                {label: "Duration:", value: "30-08-2015 to 01-09-2015"},
+                {label: "Training Conducted By", value: "Youth & Volunteers Department"}
+            ]
+        },
+           {
+            id: 13,
+            title: "Reading Habit Development Program",
+            imgSrc: "img/c13.jpg",
+            imgAlt: "Node.js Application Development",
+            description: "This document serves as formal proof that an individual successfully finished a structured educational program focused on specialized technological skills. Obtaining it required active engagement with all required materials and meeting the minimum performance standards set by the organization. It validates the individual's commitment to deepening their specialized skills in high-demand software development and data fields.",
+            details: [
+                {label: "Issuer:", value: "বিশ্বসাহিত্য কেন্দ্র"},
+                {label: "Issued:", value: "2013"},
+                {label: "Project Name:", value: "SEQAEP (Secondary Education Quality and Access Enhancement Project)"},
+                {label: "Achievement:", value: "Awarded as the Best Reader in the evaluation phase"}
+            ]
+        }
+    ];
+
+    // Certificate card generator
+    function renderCertificates() {
+        const grid = document.getElementById('certificates-grid');
+        grid.innerHTML = '';
+        certificates.forEach((cert, idx) => {
+            const div = document.createElement('div');
+            div.className = "bg-gray-50 dark:bg-slate-800 rounded-xl p-6 hover:shadow-xl transition-shadow cursor-pointer fade-in-on-scroll";
+            div.setAttribute('tabindex', 0);
+            div.setAttribute('role', 'button');
+            div.setAttribute('aria-label', cert.title);
+            div.addEventListener('click', () => openModal(cert));
+            div.addEventListener('keypress', (e) => { if (e.key === "Enter") openModal(cert); });
+
+            let cardImg;
+            // Always use only the image as cover for the top area, removing any blue background
+            cardImg = `<div class="rounded-lg h-64 mb-4 flex items-center justify-center relative overflow-hidden" style="background:transparent;">
+                <img src="${cert.imgSrc}" alt="${cert.imgAlt}" class="w-full h-full object-cover rounded-lg absolute inset-0" onerror="this.style.display='none';this.nextElementSibling&&this.nextElementSibling.classList.remove('hidden');">
+                <svg class="w-24 h-24 text-gray-300 dark:text-gray-500 z-10 relative hidden absolute inset-0 m-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+            </div>`;
+
+            div.innerHTML = `
+                ${cardImg}
+                <h3 class="text-xl font-semibold mb-2">${cert.title}</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-2">${cert.description.substring(0, 100)}${cert.description.length>100?'...':''}</p>
+                <p class="text-sm text-gray-500 dark:text-gray-500">${cert.details && cert.details[1] ? cert.details[1].label + " " + cert.details[1].value : ""}</p>
+            `;
+            grid.appendChild(div);
+        });
+    }
+
+    function openModal(cert) {
+        document.getElementById('modal-title').textContent = cert.title;
+        const modalImage = document.getElementById('modal-image');
+        modalImage.src = cert.imgSrc;
+        modalImage.alt = cert.imgAlt;
+        modalImage.style.display = "block";
+        document.getElementById('modal-svg-fallback').style.display = "none";
+        // Show image or fallback handled via onerror in <img>
+        document.getElementById('modal-description').textContent = cert.description;
+        let detailsHtml = "";
+        for(const detail of cert.details) {
+            if(detail.label && detail.value) {
+                detailsHtml += `<div><p class="font-semibold">${detail.label}</p><p class="text-gray-600 dark:text-gray-400">${detail.value}</p></div>`;
+            } else if (detail.label && (!detail.value || detail.value === "")) {
+                detailsHtml += `<div class="col-span-2"><p class="font-semibold">${detail.label}</p></div>`;
+            }
+        }
+        document.getElementById('modal-details').innerHTML = detailsHtml;
+        document.getElementById('certificate-modal').classList.remove('hidden');
+    }
+    function closeModal() {
+        document.getElementById('certificate-modal').classList.add('hidden');
+        document.getElementById('modal-image').src = "";
+        document.getElementById('modal-description').textContent = "";
+        document.getElementById('modal-details').innerHTML = "";
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        renderCertificates();
+        document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+        document.getElementById('certificate-modal').addEventListener('click', function(e){
+            if(e.target.classList.contains('modal-overlay')) closeModal();
+        });
+        document.addEventListener('keydown', function(e){
+            if(!document.getElementById('certificate-modal').classList.contains('hidden') && e.key === "Escape") closeModal();
+        });
+    });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
