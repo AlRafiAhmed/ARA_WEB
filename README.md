@@ -1,61 +1,58 @@
-# Rafi's Professional Portfolio Website
+## Rafi's Professional Portfolio Website
 
-A complete, responsive multi-page portfolio website built with HTML, Tailwind CSS (inline classes only), and vanilla JavaScript.
+A complete, responsive multi-page portfolio website built with HTML, Tailwind CSS (via CDN), and vanilla JavaScript.
 
-## 🌟 Features
+### 🌟 Key Features
 
-- **7 Complete Pages**: Home, About, Projects, Certificates, Services, Portfolio, and Contact
-- **100% Responsive**: Mobile, tablet, and desktop optimized
-- **Dark/Light Mode**: Toggle with localStorage persistence
-- **Smooth Animations**: Scroll-triggered fade-in animations
-- **Interactive Modals**: For project and certificate details
-- **Form Validation**: JavaScript-powered contact form validation
-- **Modern Design**: Clean, minimal design with Tailwind CSS
-- **No External CSS**: All styling done with Tailwind inline classes
+- **7 complete pages**: `index`, `about`, `projects`, `certificates`, `services`, `cv`, and `contact`
+- **100% responsive layout** for mobile, tablet, and desktop
+- **Dark/Light mode** with preference saved in `localStorage`
+- **Mobile-first navbar** with a **black background on small screens** for perfect visibility
+- **Smooth animations**: scroll-triggered fade‑in sections
+- **Interactive modals**: for projects and certificates
+- **Embedded CV PDF**: CV page shows a PDF viewer for `Rafis CV Resume.pdf`
 
-## 📁 Project Structure
+### 📁 Project Structure
 
-```
-Rafi-s-Professional-Website/
+```text
+ARA_WEB/
 ├── index.html              # Home page
 ├── about.html              # About me page
 ├── projects.html           # Projects showcase
-├── certificates.html       # Certificates gallery
+├── certificates.html       # Certificates gallery (driven by JS data)
 ├── services.html           # Services and pricing
-├── portfolio.html          # Portfolio gallery
-├── contact.html            # Contact form
-├── assets/
-│   ├── me.png              # Your professional photo (replace this)
-│   └── certificate-images/ # Certificate images folder
-│       ├── cert-1.jpg      # Certificate images (add your own)
-│       ├── cert-2.jpg
-│       └── ...
+├── cv.html                 # CV page (embeds the PDF)
+├── contact.html            # Contact & social links
+├── Rafis CV Resume.pdf     # CV shown inside cv.html
+├── img/                    # Images used across the site
+│   ├── gmn-1.JPG           # Home profile photo
+│   ├── gmn-2.JPG           # About page photo
+│   ├── c1.PNG ... c13.jpg  # Certificate images
+│   └── other assets        # Project/placeholders
 ├── js/
-│   └── main.js            # Main JavaScript file
-└── README.md              # This file
+│   └── main.js             # Shared JavaScript
+└── README.md               # This file
 ```
 
 ## 🚀 Getting Started
 
-### 1. Replace the Professional Photo
+### 1. Open the site locally
 
-1. Place your professional photo in the `assets/` folder
-2. Name it `me.png` (or update the image paths in HTML files)
-3. Recommended size: 800x800px or similar square format
-4. Supported formats: PNG, JPG, JPEG
+- Open `index.html` directly in your browser (double‑click or “Open With → Browser”).
 
-**Files to update:**
-- `index.html` (line with `src="assets/me.png"`)
-- `about.html` (line with `src="assets/me.png"`)
+### 2. Replace the profile photos
 
-### 2. Add Certificate Images
+1. Put your own photos into the `img/` folder.
+2. Update the `<img>` tags in:
+   - `index.html` (home profile image)
+   - `about.html` (about-page photo)
+3. Recommended size: roughly square, e.g. 800×800px.  
+4. Supported formats: JPG, JPEG, PNG.
 
-1. Add your certificate images to `assets/certificate-images/`
-2. Name them: `cert-1.jpg`, `cert-2.jpg`, `cert-3.jpg`, etc.
-3. Update the image paths in `certificates.html` if using different names
+### 3. Add or update certificate images
 
-**Files to update:**
-- `certificates.html` (modal sections with image paths)
+1. Place certificate images in the `img/` folder (the project currently uses names like `c1.PNG` … `c13.jpg`).
+2. In `certificates.html`, edit the `certificates` array to match your filenames, titles, and descriptions.
 
 ### 3. Customize Content
 
@@ -88,10 +85,9 @@ Update the following in each HTML file:
 - Modify pricing plans
 - Update CTA text
 
-#### Portfolio Page (`portfolio.html`)
-- Update portfolio items
-- Modify hover overlay content
-- Add/remove portfolio items
+#### CV Page (`cv.html`)
+- Replace `Rafis CV Resume.pdf` with your own PDF (same name), **or** change the `<iframe src="...">` to point to your file.
+- Adjust any text or headings if you change the CV file or purpose of the page.
 
 ## 🎨 Customization Guide
 

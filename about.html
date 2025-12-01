@@ -38,7 +38,7 @@
 <body class="text-gray-900 dark:text-gray-100 transition-colors duration-300 relative min-h-screen min-w-screen font-sans">
     
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-transparent backdrop-blur-sm z-50 border-b border-gray-200/50 dark:border-slate-700/50 shadow-sm">
+    <nav class="fixed top-0 w-full bg-black md:bg-transparent backdrop-blur-sm z-50 border-b border-gray-200/50 dark:border-slate-700/50 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
@@ -68,14 +68,14 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200/50 dark:border-slate-700/50 bg-transparent backdrop-blur-sm">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200/50 dark:border-slate-700/50 bg-black md:bg-transparent backdrop-blur-sm">
             <div class="px-4 pt-2 pb-4 space-y-2">
                 <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Home</a>
                 <a href="about.html" class="block px-3 py-2 rounded-md text-indigo-600 dark:text-indigo-400 font-medium">About</a>
                 <a href="projects.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Projects</a>
                 <a href="certificates.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Certificates</a>
                 <a href="services.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Services</a>
-                <a href="portfolio.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Portfolio</a>
+                <a href="cv.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">CV</a>
                 <a href="contact.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800">Contact</a>
             </div>
         </div>
@@ -139,10 +139,10 @@
             </div>
 
             <!-- Skills Section -->
-            <div class="mb-16 fade-in-on-scroll">
+            <div class="mb-16 fade-in-on-scroll" id="skills-section">
                 <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl skill-card" data-skill-label="Frontend" data-skill-percent="90">
                         <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Frontend</h3>
                         <ul class="space-y-2 text-gray-600 dark:text-gray-400">
                             <li>• HTML5, CSS3, JavaScript</li>
@@ -150,8 +150,18 @@
                             <li>• Tailwind CSS, Bootstrap</li>
                             <li>• Responsive Design</li>
                         </ul>
+                        <!-- Skill Visualizer -->
+                        <div class="mt-6 flex items-center justify-center">
+                            <svg class="skill-circle w-28 h-28" viewBox="0 0 120 120">
+                                <circle class="text-gray-300 dark:text-slate-700" stroke="currentColor" stroke-width="10" cx="60" cy="60" r="46" fill="transparent" />
+                                <circle class="skill-progress text-indigo-500 dark:text-indigo-400" stroke="currentColor" stroke-width="10" cx="60" cy="60" r="46" fill="transparent"
+                                    stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="289" />
+                                <text x="60" y="60" text-anchor="middle" dominant-baseline="central" class="fill-gray-800 dark:fill-gray-100 text-xl font-semibold skill-percent-text">0%</text>
+                                <text x="60" y="86" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400 text-xs tracking-wide">Frontend</text>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl skill-card" data-skill-label="Backend" data-skill-percent="85">
                         <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Backend</h3>
                         <ul class="space-y-2 text-gray-600 dark:text-gray-400">
                             <li>• Node.js, Python, Java</li>
@@ -159,8 +169,18 @@
                             <li>• RESTful APIs, GraphQL</li>
                             <li>• Database Design (SQL/NoSQL)</li>
                         </ul>
+                        <!-- Skill Visualizer -->
+                        <div class="mt-6 flex items-center justify-center">
+                            <svg class="skill-circle w-28 h-28" viewBox="0 0 120 120">
+                                <circle class="text-gray-300 dark:text-slate-700" stroke="currentColor" stroke-width="10" cx="60" cy="60" r="46" fill="transparent" />
+                                <circle class="skill-progress text-indigo-500 dark:text-indigo-400" stroke="currentColor" stroke-width="10" cx="60" cy="60" r="46" fill="transparent"
+                                    stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="289" />
+                                <text x="60" y="60" text-anchor="middle" dominant-baseline="central" class="fill-gray-800 dark:fill-gray-100 text-xl font-semibold skill-percent-text">0%</text>
+                                <text x="60" y="86" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400 text-xs tracking-wide">Backend</text>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                    <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl skill-card" data-skill-label="ML &amp; Data" data-skill-percent="80">
                         <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">ML & Data</h3>
                         <ul class="space-y-2 text-gray-600 dark:text-gray-400">
                             <li>• TensorFlow, PyTorch</li>
@@ -168,17 +188,27 @@
                             <li>• Data Analysis & Visualization</li>
                             <li>• Deep Learning, NLP</li>
                         </ul>
+                        <!-- Skill Visualizer -->
+                        <div class="mt-6 flex items-center justify-center">
+                            <svg class="skill-circle w-28 h-28" viewBox="0 0 120 120">
+                                <circle class="text-gray-300 dark:text-slate-700" stroke="currentColor" stroke-width="10" cx="60" cy="60" r="46" fill="transparent" />
+                                <circle class="skill-progress text-indigo-500 dark:text-indigo-400" stroke="currentColor" stroke-width="10" cx="60" cy="60" r="46" fill="transparent"
+                                    stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="289" />
+                                <text x="60" y="60" text-anchor="middle" dominant-baseline="central" class="fill-gray-800 dark:fill-gray-100 text-xl font-semibold skill-percent-text">0%</text>
+                                <text x="60" y="86" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400 text-xs tracking-wide">ML &amp; Data</text>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Experience Timeline -->
-            <div class="mb-16 fade-in-on-scroll">
+            <div class="mb-16 fade-in-on-scroll" id="experience-timeline">
                 <h2 class="text-3xl font-bold text-center mb-12">Skills & Certifications</h2>
                 <div class="max-w-3xl mx-auto space-y-8">
-                    <div class="relative pl-8 border-l-2 border-indigo-600 dark:border-indigo-400">
+                    <div class="relative pl-8 border-l-2 border-indigo-600 dark:border-indigo-400 timeline-item">
                         <div class="absolute -left-2 top-0 w-4 h-4 bg-indigo-600 dark:bg-indigo-400 rounded-full"></div>
-                        <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                        <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl timeline-card">
                             <h3 class="text-xl font-semibold mb-2">Front-end Devlopment with React</h3>
                             <p class="text-indigo-600 dark:text-indigo-400 mb-2">Creative IT Institute | 2023 - 2024</p>
                             <p class="text-gray-600 dark:text-gray-400">
@@ -188,9 +218,9 @@
                             </p>
                         </div>
                     </div>
-                    <div class="relative pl-8 border-l-2 border-indigo-600 dark:border-indigo-400">
+                    <div class="relative pl-8 border-l-2 border-indigo-600 dark:border-indigo-400 timeline-item">
                         <div class="absolute -left-2 top-0 w-4 h-4 bg-indigo-600 dark:bg-indigo-400 rounded-full"></div>
-                        <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl">
+                        <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl timeline-card">
                             <h3 class="text-xl font-semibold mb-2">python with machine learning</h3>
                             <p class="text-indigo-600 dark:text-indigo-400 mb-2">EDGE ICT Division Bangladesh | 2024 - 2025</p>
                             <p class="text-gray-600 dark:text-gray-400">

@@ -93,6 +93,91 @@ const ScrollAnimations = {
 };
 
 // ============================================
+// Skill Visualizer (SVG Circle Progress)
+// ============================================
+const SkillVisualizer = {
+    init() {
+        const cards = document.querySelectorAll('.skill-card');
+        if (!cards.length) return;
+
+        const maxCircumference = 2 * Math.PI * 46; // r = 46 (matches SVG)
+
+        const animateCard = (card) => {
+            const percent = parseInt(card.getAttribute('data-skill-percent') || '0', 10);
+            const label = card.getAttribute('data-skill-label') || '';
+            const circle = card.querySelector('.skill-progress');
+            const percentText = card.querySelector('.skill-percent-text');
+            const labelText = card.querySelector('text:last-of-type');
+
+            if (!circle || !percentText) return;
+
+            if (labelText && label) {
+                labelText.textContent = label;
+            }
+
+            let current = 0;
+            const targetOffset = maxCircumference * (1 - percent / 100);
+            circle.style.strokeDasharray = String(maxCircumference);
+
+            const step = () => {
+                current += 1;
+                if (current > percent) {
+                    current = percent;
+                }
+                const offset = maxCircumference * (1 - current / 100);
+                circle.style.strokeDashoffset = String(offset);
+                percentText.textContent = current + '%';
+
+                if (current < percent) {
+                    requestAnimationFrame(step);
+                }
+            };
+
+            // Start from full offset then animate
+            circle.style.strokeDashoffset = String(maxCircumference);
+            requestAnimationFrame(step);
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCard(entry.target);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.4 });
+
+        cards.forEach(card => observer.observe(card));
+    }
+};
+
+// ============================================
+// Timeline Animation (Experience & Education)
+// ============================================
+const TimelineAnimator = {
+    init() {
+        const items = document.querySelectorAll('.timeline-item');
+        if (!items.length) return;
+
+        items.forEach(item => {
+            item.classList.add('opacity-0', 'translate-y-6', 'transition-all', 'duration-700');
+        });
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-6');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25, rootMargin: '0px 0px -40px 0px' });
+
+        items.forEach(item => observer.observe(item));
+    }
+};
+
+// ============================================
 // Modal Management
 // ============================================
 const ModalManager = {
@@ -229,5 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ScrollAnimations.init();
     ModalManager.init();
     FormValidator.init();
+    SkillVisualizer.init();
+    TimelineAnimator.init();
 });
 
